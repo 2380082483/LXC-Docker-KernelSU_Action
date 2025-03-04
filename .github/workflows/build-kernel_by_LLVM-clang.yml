@@ -58,10 +58,10 @@ jobs:
         echo "LLVM_CLANG_VERSION=$(cat $CONFIG_ENV | grep -w "LLVM_CLANG_VERSION" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
         echo "ELECTRON_BINUTILS_VERSION1=$(cat $CONFIG_ENV | grep -w "ELECTRON_BINUTILS_VERSION1" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
 
-    - name: Set swap to 50G
+    - name: Set swap to 15G
       uses: pierotofy/set-swap-space@master
       with:
-        swap-size-gb: 50
+        swap-size-gb: 15
 
     - name: Setup build kernel environment
       run: |
