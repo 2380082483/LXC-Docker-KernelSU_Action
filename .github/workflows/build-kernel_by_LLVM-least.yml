@@ -59,10 +59,10 @@ jobs:
         echo "ELECTRON_BINUTILS_VERSION=$(cat $CONFIG_ENV | grep -w "ELECTRON_BINUTILS_VERSION" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
 
 
-    - name: Set swap to 10G
+    - name: Set swap to 32G
       uses: pierotofy/set-swap-space@master
       with:
-        swap-size-gb: 10
+        swap-size-gb: 32
 
     - name: Setup build kernel environment
       run: |
